@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Student details</title>
+</head>
+<body>
+<table id="student" >
+<tr>
+<th id="lohith">Lohith</th>
+<th id="nidhi">Nidhi</th>
+</tr>
+</table>
+<table id="studentdetails" hidden>
+<tr>
+<td id="usn"/>
+<td id="dept"/>
+</tr>
+</table>
+
+<script>
+
+document.getElementById("lohith").addEventListener("mouseover",funclohith);
+document.getElementById("nidhi").addEventListener("mouseover",funcnidhi);
+
+function funclohith() {
+var Obj;
+document.getElementById("studentdetails").removeAttribute('hidden');
+Obj = {
+"usn":"1ms16is143",
+"dept":"ISE"
+};
+
+my_usn = Obj.usn;
+my_dept = Obj.dept;
+
+document.getElementById("usn").innerHTML = my_usn;
+document.getElementById("dept").innerHTML = my_dept;
+
+}
+
+function funcnidhi() {
+var Obj;
+document.getElementById("studentdetails").removeAttribute('hidden');
+
+Obj = {
+"usn":"1ms16is141",
+"dept":"CSE"
+};
+
+my_usn = Obj.usn;
+my_dept = Obj.dept;
+
+document.getElementById("usn").innerHTML = my_usn;
+document.getElementById("dept").innerHTML = my_dept;
+
+}
+
+</script>
+</body>
+
+<style>
+td {
+      font-size: xx-large;
+  }
+th {
+    font-size: x-large;
+    background-color: #4CAF50;
+    color: white;
+  }
+table {
+    text-align: center;
+    width: 100%;
+  }
+th:hover {
+background-color: #8B008B;
+}
+</style>
+</html>
